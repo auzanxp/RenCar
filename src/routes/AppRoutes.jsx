@@ -20,8 +20,22 @@ export default function AppRoutes() {
             </Navbar>
           }
         />
-        <Route path="/login" element={<Guest el={<Login />} />} />
-        <Route path="/register" element={<Guest el={<Register />} />} />
+        <Route
+          path="/login"
+          element={
+            <Navbar>
+              <Guest el={<Login />} />
+            </Navbar>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Navbar>
+              <Guest el={<Register />} />
+            </Navbar>
+          }
+        />
         <Route
           path="/listcars"
           element={
@@ -32,6 +46,14 @@ export default function AppRoutes() {
         />
         <Route
           path="/ordercar"
+          element={
+            <Navbar>
+              <Auth el={<BookCar />} />
+            </Navbar>
+          }
+        />
+        <Route
+          path="/ordercar/:id"
           element={
             <Navbar>
               <Auth el={<BookCar />} />

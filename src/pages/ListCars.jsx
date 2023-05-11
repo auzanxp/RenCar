@@ -2,8 +2,14 @@ import { Link } from "react-router-dom";
 import HeroCar from "../assets/hero/hero-car.png";
 import HeroCarr from "../assets/hero/main-car.png";
 import { Car } from "lucide-react";
+import { useEffect } from "react";
 
 export default function ListCars() {
+
+  useEffect(() => {
+    document.title = 'List Cars';
+  });
+
   return (
     <>
       <div className="container max-w-screen-xl mx-auto px-10">

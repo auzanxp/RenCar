@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Register() {
+
+    useEffect(() => {
+        document.title = 'Register';
+      });
+
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden mt-10">
       <div className="w-full p-6 m-auto bg-slate-100 rounded-md shadow-md lg:max-w-xl">

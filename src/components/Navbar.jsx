@@ -4,9 +4,7 @@ import useAppContext from "../contex/AppContex";
 import DropDown from "./Dropdown";
 
 export default function Navbar({ children }) {
-  const {
-    username
-  } = useAppContext();
+  const { username } = useAppContext();
   return (
     <>
       <nav>
@@ -20,9 +18,9 @@ export default function Navbar({ children }) {
             <li>
               <Link to={"/"}>Home</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to={"/listcars"}>List Cars</Link>
-            </li>
+            </li> */}
             <li>
               <Link to={"/ordercar"}>Book Cars</Link>
             </li>
@@ -30,17 +28,17 @@ export default function Navbar({ children }) {
           <div className="flex items-center space-x-10">
             {!username ? (
               <>
-                <Link
+                {/* <Link
                   to={"/login"}
                   className="text-black font-medium transition-colors duration-300 hover:text-blue-600"
                 >
                   Sign In
-                </Link>
+                </Link> */}
                 <Link
-                  to={"/register"}
-                  className="bg-blue-600 text-white font-medium py-3 px-8 rounded-md shadow-md transition-all duration-300 hover:shadow-lg hover:bg-blue-500"
+                  to={"/Login"}
+                  className="bg-blue-600 text-white font-medium py-2 px-8 rounded-md shadow-md transition-all duration-300 hover:shadow-lg hover:bg-blue-500"
                 >
-                  Register
+                  Sign In
                 </Link>
               </>
             ) : (

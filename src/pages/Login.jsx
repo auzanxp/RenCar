@@ -1,16 +1,30 @@
 import { Link } from "react-router-dom";
 import useAppContext from "../contex/AppContex";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Login() {
   const context = useAppContext();
   const [isLoading, setIsLoading] = useState(false);
 
+  const toastrOptions = {
+    position: "top-center",
+    autoClose: 3500,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+  };
+
+  useEffect(() => {
+    document.title = "Login";
+  });
+
   async function handleSubmitLogin(e) {
     setIsLoading(true);
     e.preventDefault();
     const result = await context.loginHandler(e);
-    // toast.error(result?.response?.data?.message, toastrOptions);
+    toast.error(result?.message, toastrOptions);
     setIsLoading(false);
   }
 
@@ -53,7 +67,7 @@ export default function Login() {
           {" "}
           Don't have an account?{" "}
           <Link
-            to="/register"
+            to="/login"
             className="font-medium text-blue-600 hover:underline"
           >
             Sign up

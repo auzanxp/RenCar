@@ -17,7 +17,7 @@ export default function DropDown({ value }) {
             <div>
                 <button
                     type="button"
-                    className="flex items-center justify-center w-full px-4 py-[6px] text-sm font-medium rounded-lg bg-slate-800 hover:bg-slate-600 text-white focus:outline-none "
+                    className="bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-md transition-all duration-300 hover:shadow-lg hover:bg-blue-500 inline-flex items-center"
                     id="options-menu"
                     onClick={() => handleShow()}
                 >
@@ -27,10 +27,10 @@ export default function DropDown({ value }) {
             </div>
             <div
                 className={`${show ? 'block' : 'hidden'
-                    } origin-top-right absolute right-0 mt-2 w-fit rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5`}
+                    } origin-top-right absolute right-0 mt-2 w-fit rounded-md shadow-lg bg-red-400 dark:bg-gray-800 ring-1 ring-black ring-opacity-5`}
             >
-                <button onClick={logoutHandler} color="red" className='px-5'>
-                    <span className="flex flex-col">
+                <button onClick={logoutHandler} color="red" className='px-5 py-2'>
+                    <span className="flex flex-col text-white">
                         <span>Logout</span>
                     </span>
                 </button>
