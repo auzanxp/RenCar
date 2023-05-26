@@ -18,9 +18,9 @@ export default function Navbar({ children }) {
             <li>
               <Link to={"/"}>Home</Link>
             </li>
-            {/* <li>
+            <li>
               <Link to={"/listcars"}>List Cars</Link>
-            </li> */}
+            </li>
             <li>
               <Link to={"/ordercar"}>Book Cars</Link>
             </li>
