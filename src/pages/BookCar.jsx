@@ -28,7 +28,6 @@ export default function BookCar() {
   const [orders, setOrders] = useState(null);
   const [fetchStatus, setFetchStatus] = useState(true);
   const [input, setInput] = useState(initState);
-  const [message, setMessage] = useState();
   const navigate = useNavigate();
   const Id = useParams().id;
 
